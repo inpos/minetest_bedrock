@@ -9,7 +9,7 @@ if minetest.setting_getbool("generate_bedrock") then
 end
 
 minetest.register_node("bedrock:bedrock", {
-	description = "Bedrock",
+	description = "Коренная порода",
 	inventory_image = minetest.inventorycube("bedrock_bedrock.png"),
 	tiles = {"bedrock_bedrock.png"},
 	groups = {unbreakable=1},
@@ -17,7 +17,7 @@ minetest.register_node("bedrock:bedrock", {
 })
 
 minetest.register_node("bedrock:concrete", {
-	description = "Unbreakable Concrete",
+	description = "Неломающийся бетон",
 	inventory_image = minetest.inventorycube("bedrock_concrete.png"),
 	tiles = {"bedrock_concrete.png"},
 	groups = {unbreakable=1},
@@ -25,7 +25,7 @@ minetest.register_node("bedrock:concrete", {
 })
 
 minetest.register_node("bedrock:glass", {
-	description = "Unbreakable Glass",
+	description = "Небьющееся стекло",
 	drawtype = "glasslike",
 	sunlight_propagates = true,
 	inventory_image = minetest.inventorycube("default_glass.png"),
@@ -38,26 +38,26 @@ minetest.register_node("bedrock:glass", {
 stairs.register_stair_and_slab("bedrock", "bedrock:bedrock",
 		{unbreakable=1},
 		{"bedrock_bedrock.png"},
-		"Bedrock stair",
-		"Bedrock slab",
+		"Ступенька из коренной породы",
+		"Плита из коренной породы",
 		default.node_sound_stone_defaults())
 
 stairs.register_stair_and_slab("unbreakable_concrete", "bedrock:concrete",
 		{unbreakable=1},
 		{"bedrock_concrete.png"},
-		"Unbreakable concrete stair",
-		"Unbreakabe concrete slab",
+		"Ступенька из неломающегося бетона",
+		"Плита из неломающегося бетона",
 		default.node_sound_stone_defaults())
 
 stairs.register_stair_and_slab("unbreakable_glass", "bedrock:glass",
 		{unbreakable=1},
 		{"default_glass.png"},
-		"Unbreakable glass stair",
-		"Unbreakabe glass slab",
+		"Ступенька из небьющегося стекла",
+		"Плита из небьющегося стекла",
 		default.node_sound_glass_defaults())
 
 minetest.register_tool("bedrock:pick", {
-	description = "Bedrock Pick",
+	description = "Кирка из коренной породы",
 	inventory_image = "bedrock_pick.png",
 	tool_capabilities = {
 		max_drop_level=3,

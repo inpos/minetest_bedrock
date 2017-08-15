@@ -93,7 +93,7 @@ for i = 1, 15 do
 end
 
 minetest.register_node("bedrock:bar", {
-    description = "Bedrock Bar",
+    description = "Болоса коренной породы",
     tiles = {"bedrock_bar.png"},
     inventory_image = "bedrock_bar.png",
     wield_image = "bedrock_bar.png",
